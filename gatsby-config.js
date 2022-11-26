@@ -4,7 +4,9 @@
 module.exports = {
   siteMetadata: {
     title: `Svetlo's Blog`,
-    siteUrl: `https://www.yourdomain.tld`
+    description: `Welcome to my blog site`,
+    siteUrl: `https://www.yourdomain.tld`,
+    author: `Svetlo`
   },
   plugins: ["gatsby-plugin-styled-components", {
     resolve: 'gatsby-plugin-manifest',
