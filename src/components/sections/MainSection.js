@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { themes } from "../styles/ColorStyles"
 import { BodyMain, H1 } from "../styles/TextStyles"
 import LinkButton from "../buttons/LinkButton"
+import CustomButton from "../buttons/CustomButton"
 
 function MainSection() {
     return (
@@ -11,9 +12,7 @@ function MainSection() {
                 <TextWrapper>
                     <Title>Hi people</Title>
                     <Description>Welcome to my blog site under construction.</Description>
-                    <LinkButton 
-                        Title="Go to page"
-                        Subtitle="If you dare" />
+                    <CustomButton />
                 </TextWrapper>
             </ContentWrapper>
         </Wrapper>

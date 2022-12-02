@@ -4,6 +4,7 @@ export const themes = {
         textSecondary: "rgba(0,0,0,0.7)",
         backgroundPrimary: "#DDF9FF",
         backgroundSecondary: "#FFEADE",
+        colorPrimary: "#00CFFD",
     }, 
     darkMode: {
         textPrimary: "#FFFFFF",
