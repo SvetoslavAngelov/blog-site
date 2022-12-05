@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { themes } from "../styles/ColorStyles"
 import { BodyMain, H1 } from "../styles/TextStyles"
 import LinkButton from "../buttons/LinkButton"
-import CustomButton from "../buttons/CustomButton"
+import MockupAnimation from "../animations/MockupAnimation"
 
 function MainSection() {
     return (
@@ -12,8 +12,9 @@ function MainSection() {
                 <TextWrapper>
                     <Title>Hi people</Title>
                     <Description>Welcome to my blog site under construction.</Description>
-                    <CustomButton />
+                    <LinkButton />
                 </TextWrapper>
+                <MockupAnimation />
             </ContentWrapper>
         </Wrapper>
     )
@@ -28,6 +29,9 @@ const ContentWrapper = styled.div`
     max-width: 1340px;
     margin: 0 auto;
     padding: 100px 100px;
+
+    display: grid; 
+    grid-template-columns: 360px auto;
 `
 const TextWrapper = styled.div`
     max-width: 360px;
