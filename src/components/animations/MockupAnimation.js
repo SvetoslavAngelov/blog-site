@@ -16,6 +16,27 @@ export default function MockupAnimation(){
 const Wrapper = styled.div`
     position: relative; 
 
+    perspective: 5000;
+
+    div {
+        transform: rotateY(-20deg) rotateX(20deg);
+        transform-origin: bottom left; 
+    }
+
+    * {
+        transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    :hover div {
+        transform: rotateY(0deg) rotateX(0deg);
+        &.mockup1 {
+            transition-delay: 0.5s;
+        }
+        :hover {
+            filter: brightness(150%) saturate(120%)
+        }
+    }
+
     .mockup1 {
         position: absolute;
     width: 183px;

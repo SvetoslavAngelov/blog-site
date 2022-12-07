@@ -5,15 +5,10 @@ module.exports = {
   siteMetadata: {
     title: `Svetlo's Blog`,
     description: `Welcome to my blog site`,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://www.svetlo.co.uk`,
     author: `Svetlo`
   },
-  plugins: ["gatsby-plugin-styled-components", {
-    resolve: 'gatsby-plugin-manifest',
-    options: {
-      "icon": "src/images/icon.png"
-    }
-  }, "gatsby-plugin-mdx", {
+  plugins: ["gatsby-plugin-mdx", {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "pages",
