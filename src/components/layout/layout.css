@@ -22,7 +22,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-  box-sizing: border-box;
+  	box-sizing: border-box;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -56,7 +56,7 @@ table {
 }
 /* <a> stands for hyperlink */
 a {
-  color: #3913B8;
+  color: rgb(0, 0, 0, 0.7);
   font-weight: 600;
   text-decoration: none;
 }

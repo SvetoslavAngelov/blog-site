@@ -23,12 +23,11 @@ function MainSection() {
 export default MainSection
 
 const Wrapper = styled.div` 
-    background: ${themes.lightMode.backgroundPrimary};
+    
 `
 const ContentWrapper = styled.div`
-    max-width: 1340px;
+    max-width: 1240px;
     margin: 0 auto;
-    padding: 100px 100px;
 
     display: grid; 
     grid-template-columns: 360px auto;
