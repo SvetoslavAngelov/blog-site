@@ -20,8 +20,10 @@ const Wrapper = styled.div`
   display: flex; 
   flex-direction: column; 
   align-items: flex-start; 
-  padding: 100px; 
+  padding-top: 20px;
+  padding-left: 100px;
+  padding-right: 100px; 
   gap: 100px; 
 
-  width: 1440px; 
+  width: 100%; 
 `

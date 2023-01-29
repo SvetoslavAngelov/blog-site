@@ -1,38 +1,42 @@
+import { Link } from "gatsby"
 import React from "react"
-import {Link} from "gatsby"
 import styled from "styled-components"
+import { themes } from "../styles/ColorStyles"
+import { BodyMain, H3 } from "../styles/TextStyles"
 
 const menuData = [
-    {title: "Home", link: "index"}, 
-    {title: "Blog", link: "404"}, 
-    {title: "Projects", link: "404"}, 
-    {title: "About", link: "404"}]
+    {title: "Home", link: "/"}, 
+    {title: "Blog", link: "/blog"}, 
+    {title: "Projects", link: "/404"}, 
+    {title: "About", link: "/404"}]
 
 const socials = [
-    {title: "", icon: "/images/icons/twitter.svg", link: "404"},
-    {title: "", icon: "/images/icons/twitter.svg", link: "404"},
-    {title: "", icon: "/images/icons/twitter.svg", link: "404"},
-    {title: "", icon: "/images/icons/twitter.svg", link: "404"},
+    {title: "", icon: "/images/logos/Twitter - Negative.svg", link: "404"},
+    {title: "", icon: "/images/logos/LinkedIn - Negative.svg", link: "https://www.linkedin.com/in/svetoslavangelov86/"},
+    {title: "", icon: "/images/logos/YouTube - Negative.svg", link: "404"},
+    {title: "", icon: "/images/logos/Instagram - Negative.svg", link: "404"},
 ]
 
 export default function Header() {
+
     return (
         <Wrapper>
-            <Padding />
+            <Title>Svetlo</Title>
             <MenuWrapper>
                 {menuData.map((item, index) => (
-                    <Link to={item.link} key={index}>
-                    {item.title}
+                    <Link to={item.link} key={index} >
+                        <MenuText>
+                            {item.title}
+                        </ MenuText>                        
                     </ Link>
                 ))}
             </ MenuWrapper>
-            <Padding />
             <MenuWrapper>
                 {socials.map((item, index) => (
-                    <Link to={item.link} key={index}>
+                    <a href={item.link} key={index}>
                         <img src={item.icon} alt={item.title}/>
                         {item.title}
-                    </ Link>
+                    </ a>
                 ))}
             </ MenuWrapper>
         </ Wrapper>
@@ -42,21 +46,35 @@ export default function Header() {
 const Wrapper = styled.div`
     display: flex; 
     flex-direction: row; 
-    align-items: flex-start; 
+    justify-content: space-between;
+    align-items: center; 
+    width: 100%;
     padding: 10px; 
-    gap: 10px; 
-    
-    width: 1240px;
-    height: 100px; 
-`
-const Padding = styled.div`
-    width: 160px; 
+
+    max-height: 100px; 
 `
 const MenuWrapper = styled.div`
     display: flex;
-    flex-direction: row; 
-    align-items: flex-start; 
+    flex-direction: row;
+    align-items: center;
+    align-self: flex-end; 
 
+    height: 80px;
     padding: 10px;
     gap: 40px; 
+`
+const MenuText = styled(BodyMain)`
+    color: ${themes.lightMode.textSecondary};
+
+    :hover {
+        text-decoration: underline;
+    }
+`
+const Title = styled(H3)`
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+
+    height: 80px;
+    color: ${themes.lightMode.textSecondary};
 `

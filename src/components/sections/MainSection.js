@@ -3,7 +3,6 @@ import styled from "styled-components"
 import { themes } from "../styles/ColorStyles"
 import { BodyMain, H1 } from "../styles/TextStyles"
 import LinkButton from "../buttons/LinkButton"
-import MockupAnimation from "../animations/MockupAnimation"
 
 function MainSection() {
     return (
@@ -14,7 +13,6 @@ function MainSection() {
                     <Description>Welcome to my blog site under construction.</Description>
                     <LinkButton />
                 </TextWrapper>
-                <MockupAnimation />
             </ContentWrapper>
         </Wrapper>
     )
