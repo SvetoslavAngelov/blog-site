@@ -19,7 +19,7 @@ export default function Layout({ children }) {
 const Wrapper = styled.div`
   display: flex; 
   flex-direction: column; 
-  align-items: flex-start; 
+  align-items: center; 
   padding-top: 20px;
   padding-left: 100px;
   padding-right: 100px; 

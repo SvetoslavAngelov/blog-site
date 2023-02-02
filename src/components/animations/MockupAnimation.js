@@ -18,11 +18,6 @@ const Wrapper = styled.div`
 
     perspective: 5000;
 
-    div {
-        transform: rotateY(-20deg) rotateX(20deg);
-        transform-origin: bottom left; 
-    }
-
     * {
         transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
     }
