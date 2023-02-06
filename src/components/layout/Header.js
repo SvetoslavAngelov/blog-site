@@ -1,8 +1,9 @@
 import { Link } from "gatsby"
-import React from "react"
+import React, {useState} from "react"
 import styled from "styled-components"
 import { themes } from "../styles/ColorStyles"
 import { BodyMain, H3 } from "../styles/TextStyles"
+import MenuTooltip from "../tooltips/MenuTooltip"
 
 const menuData = [
     {title: "Home", link: "/"}, 
@@ -19,9 +20,13 @@ const socials = [
 
 export default function Header() {
 
+    const [isOpen, setIsOpen] = useState(false)
+
     return (
         <Wrapper>
-            <Title>Svetlo</Title>
+            <Link to="/">
+                <Title>Svetlo</Title>
+            </ Link>
             <MenuWrapper>
                 {menuData.map((item, index) => (
                     <Link to={item.link} key={index} >
@@ -39,6 +44,8 @@ export default function Header() {
                     </ a>
                 ))}
             </ MenuWrapper>
+            < Contents src="/images/assets/Hamburger.svg" className = "Hamburger" onClick = {() => setIsOpen(!isOpen)}/>
+            < MenuTooltip isOpen={isOpen}/> 
         </ Wrapper>
     )
 }
@@ -51,7 +58,9 @@ const Wrapper = styled.div`
     width: 100%;
     padding: 10px; 
 
-    max-height: 100px; 
+    padding: 50px 100px 50px; 
+
+    background: ${themes.lightMode.backgroundSecondary};
 `
 const MenuWrapper = styled.div`
     display: flex;
@@ -59,22 +68,35 @@ const MenuWrapper = styled.div`
     align-items: center;
     align-self: flex-end; 
 
-    height: 80px;
     padding: 10px;
     gap: 40px; 
+
+    @media (max-width: 768px) {
+        display: none;
+    }
 `
 const MenuText = styled(BodyMain)`
-    color: ${themes.lightMode.textSecondary};
+    color: ${themes.lightMode.textPrimary};
 
     :hover {
         text-decoration: underline;
     }
 `
 const Title = styled(H3)`
-    display: flex;
-    flex-direction: row;
-    align-items: center; 
 
-    height: 80px;
-    color: ${themes.lightMode.textSecondary};
+    color: ${themes.lightMode.textPrimary};
+`
+const Contents = styled.img`
+
+    width: 48px; 
+    height: 48px; 
+
+    :hover {
+        transform: scale(1.1);
+        transition: 0.2s;
+    }
+
+    @media (min-width: 768px) {
+        display: none;
+    }
 `

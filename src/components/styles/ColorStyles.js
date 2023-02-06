@@ -1,9 +1,9 @@
 export const themes = {
     lightMode: {
-        textPrimary: "#000000",
+        textPrimary: "rgba(0,0,0,0.7)",
         textSecondary: "rgba(0,0,0,0.7)",
-        backgroundPrimary: "#DDF9FF",
-        backgroundSecondary: "#FFEADE",
+        backgroundPrimary: "#F1F1EF",
+        backgroundSecondary: "#FFDCC9",
         colorPrimary: "#00CFFD",
     }, 
     darkMode: {
