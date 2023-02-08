@@ -14,7 +14,7 @@ export default function Footer() {
     return (
         <Wrapper>
             <FooterText>
-                {"Connect:"}
+                {"Connect"}
             </ FooterText>
             <MenuWrapper>
                 {socials.map((item, index) => (
@@ -30,14 +30,18 @@ export default function Footer() {
 
 const Wrapper = styled.div`
     display: flex; 
-    flex-direction: row; 
+    justify-content: space-between;
     align-items: center; 
     width: 100%;
-    padding: 10px; 
+    padding: 40px; 
 
     padding: 50px 100px 50px; 
 
     background: ${themes.lightMode.backgroundSecondary};
+
+    @media (max-width: 420px) {
+        padding: 50px 20px 50px;
+    }
 `
 const MenuWrapper = styled.div`
     display: flex;
@@ -45,7 +49,7 @@ const MenuWrapper = styled.div`
     align-items: center;
     align-self: flex-end; 
 
-    padding: 10px;
+    padding: 40px;
     gap: 40px; 
 `
 

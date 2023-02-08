@@ -1,47 +1,84 @@
 import React from "react"
 import styled from "styled-components"
 import { themes } from "../styles/ColorStyles"
-import { BodyIntro, Caption } from "../styles/TextStyles"
+import { BodyIntro, Caption, MediumText } from "../styles/TextStyles"
 
-export default function ArticleSummary({date = "26/01/2023", title = "Title"}) {
+export default function ArticleSummary(
+    {date = "26/01/2023", 
+        title = "Title", 
+        text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rhoncus felis non felis fringilla, a imperdiet velit dapibus. Suspendisse vel aliquet ex, eu sodales lectus."}) {
     return (
         <Wrapper>
-            <Card> 
-                <Title>
-                    {title}
-                </ Title>
-                <Date>
-                    {date}
-                </ Date>
-            </ Card>
+            <Image src="/images/assets/PlaceHolder.png" className = "placeholder"/>
+            <Title>
+                {title}
+            </ Title>
+            <Date>
+                {date}
+            </ Date>
+            <Text>
+                {text}
+            </ Text>
         </Wrapper>
     )
 }
 
 const Wrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
 
+    gap: 10px;
+
+    background: ${themes.lightMode.backgroundPrimary};
 `
-const Card = styled.div`
-    display: flex; 
-    flex-direction: column; 
-    align-items: center;
+const Image = styled.img`
+    max-width: 460px; 
+    height: 360px;
 
-    padding: 10px; 
-    gap: 10px; 
-
-    width: 340px;
-    height: 400px; 
-
-    background: #f4fbff; 
-    box-shadow: 0.5px 1px 2px rgba(0, 0, 0, 0.25);
-
-    border-radius: 20px; 
+    @media (max-width: 420px) {
+        max-width: 390px; 
+    }
 `
-
 const Date = styled(Caption)`
+    max-width: 460px; 
     color: ${themes.lightMode.textSecondary};
-`
 
+    @media (max-width: 1024px) {
+        max-width: 380px;
+        padding: 10px; 
+    }
+
+    @media (max-width: 420px) {
+        max-width: 380px;
+        padding: 10px; 
+    }
+`
 const Title = styled(BodyIntro)`
+    max-width: 460px; 
     color: ${themes.lightMode.textSecondary};
+
+    @media (max-width: 1024) {
+        max-width: 380px;
+        padding: 10px; 
+    }
+
+    @media (max-width: 420px) {
+        max-width: 380px;
+        padding: 10px; 
+    }
+`
+const Text = styled(MediumText)`
+    max-width: 460px; 
+    color: ${themes.lightMode.textSecondary};
+
+    @media (max-width: 1024) {
+        max-width: 380px;
+        padding: 10px; 
+    }
+
+    @media (max-width: 420px) {
+        max-width: 380px;
+        padding: 10px; 
+    }
 `

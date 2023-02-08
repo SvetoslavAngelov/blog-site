@@ -17,15 +17,14 @@ export default MainSection
 
 const Wrapper = styled.div` 
     display: grid;
-    grid-template-columns: 360px auto; 
+    grid-template-columns: 390px auto; 
     justify-content: center; 
 
     width: 100%;
 
-    padding: 10px; 
-    gap: 100px;
+    gap: 100px 200px;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
         grid-template-columns: 1fr;
     }
 `
