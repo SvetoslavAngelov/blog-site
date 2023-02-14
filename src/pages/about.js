@@ -1,25 +1,25 @@
 import React from "react"
+import { Link } from "gatsby"
 import styled from "styled-components"
-import { themes } from "../styles/ColorStyles"
-import { BodyIntro, Caption, MediumText } from "../styles/TextStyles"
+import Layout from "../components/layout/layout"
+import Seo from "../components/layout/seo"
+import { themes } from "../components/styles/ColorStyles"
+import { BodyIntro, MediumText } from "../components/styles/TextStyles"
+import Content from "../components/sections/Content"
 
-export default function ArticleSummary(
-    {date = "26/01/2023", 
-        title = "Title", 
-        text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rhoncus felis non felis fringilla, a imperdiet velit dapibus. Suspendisse vel aliquet ex, eu sodales lectus."}) {
+export default function About() {
+
     return (
+        <Layout>
+        <Seo title="Blog" />
         <Wrapper>
+            <Content />
+            <Title>About me</ Title>
             <Image src="/images/assets/PlaceHolder.png" className = "placeholder"/>
-            <Title>
-                {title}
-            </ Title>
-            <Date>
-                {date}
-            </ Date>
-            <Text> q
-                {text}
-            </ Text>
-        </Wrapper>
+            <Text src="/text/aboutMe.md" className="aboutMe"/>
+        </ Wrapper>
+        <Link to="/">Back to Home</Link>
+      </Layout>
     )
 }
 
@@ -40,20 +40,6 @@ const Image = styled.img`
     
     @media (max-width: 420px) {
         max-width: 390px; 
-    }
-`
-const Date = styled(Caption)`
-    max-width: 460px; 
-    color: ${themes.lightMode.textSecondary};
-
-    @media (max-width: 1024px) {
-        max-width: 380px;
-        padding: 10px; 
-    }
-
-    @media (max-width: 420px) {
-        max-width: 380px;
-        padding: 10px; 
     }
 `
 const Title = styled(BodyIntro)`

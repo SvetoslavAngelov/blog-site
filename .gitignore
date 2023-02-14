@@ -2,5 +2,8 @@ node_modules/
 .cache/
 public/
 images/
+content/
+gatsby-config.js
+.env
 .DS_Store
 
