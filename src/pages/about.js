@@ -5,7 +5,6 @@ import Layout from "../components/layout/layout"
 import Seo from "../components/layout/seo"
 import { themes } from "../components/styles/ColorStyles"
 import { BodyIntro, MediumText } from "../components/styles/TextStyles"
-import Content from "../components/sections/Content"
 
 export default function About() {
 
@@ -13,7 +12,6 @@ export default function About() {
         <Layout>
         <Seo title="Blog" />
         <Wrapper>
-            <Content />
             <Title>About me</ Title>
             <Image src="/images/assets/PlaceHolder.png" className = "placeholder"/>
             <Text src="/text/aboutMe.md" className="aboutMe"/>

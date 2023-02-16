@@ -1,14 +1,32 @@
 import React from "react"
 import styled from "styled-components"
+import { graphql, useStaticQuery } from "gatsby"
 import ArticleSummary from "../sections/ArticleSummary"
 
 function MainSection() {
+
+    const data = useStaticQuery(graphql`
+        query {
+            allMdx {
+                nodes {
+                    frontmatter {
+                        date, 
+                        slug
+                    }
+                }
+            }
+        }
+    `);
+
+    const nodes = data.allMdx.nodes.map((node) => 
+        <ArticleSummary 
+            date = {node.frontmatter.date}
+            title = {node.frontmatter.slug} />
+    )
+
     return (
         <Wrapper>
-            < ArticleSummary date="09/09/2023" title="Exciting article"/> 
-            < ArticleSummary date="09/09/2023" title="Exciting article"/>
-            < ArticleSummary date="09/09/2023" title="Exciting article"/>
-            < ArticleSummary date="09/09/2023" title="Exciting article"/>
+            {nodes}
         </Wrapper>
     )
 }
