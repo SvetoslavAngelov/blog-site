@@ -4,11 +4,11 @@ import { graphql, useStaticQuery } from "gatsby"
 import { Link } from "gatsby"
 import ArticleSummary from "../sections/ArticleSummary"
 
-function MainSection() {
+function BlogSection() {
 
     const data = useStaticQuery(graphql`
         query {
-            allMdx {
+            allMdx (filter: {internal: {contentFilePath: {regex: "/content/blog/"}}}) {
                 nodes {
                     frontmatter {
                         date,
@@ -22,7 +22,7 @@ function MainSection() {
     `);
 
     const nodes = data.allMdx.nodes.map((node) => 
-        <Link to= {node.frontmatter.slug}>
+        <Link to={node.frontmatter.slug}>
             <ArticleSummary 
                 date = {node.frontmatter.date}
                 title = {node.frontmatter.title}
@@ -37,7 +37,7 @@ function MainSection() {
     )
 }
 
-export default MainSection
+export default BlogSection
 
 const Wrapper = styled.div` 
     display: grid;

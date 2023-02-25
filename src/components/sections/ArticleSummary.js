@@ -16,7 +16,7 @@ export default function ArticleSummary(
             <Date>
                 {date}
             </ Date>
-            <Text> q
+            <Text>
                 {text}
             </ Text>
         </Wrapper>
