@@ -13,9 +13,10 @@ function BlogSection() {
                     frontmatter {
                         date,
                         title, 
-                        slug
+                        slug,
+                        featuredImage,
+                        description
                     }
-                    excerpt
                 }
             }
         }
@@ -26,7 +27,8 @@ function BlogSection() {
             <ArticleSummary 
                 date = {node.frontmatter.date}
                 title = {node.frontmatter.title}
-                text = {node.excerpt} />
+                text = {node.frontmatter.description}
+                img = {node.frontmatter.featuredImage} />
         </Link>
     )
 

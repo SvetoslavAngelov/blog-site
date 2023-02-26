@@ -1,5 +1,5 @@
 const path = require("path")
-const postTemplate = path.resolve(`./src/templates/post.jsx`)
+const blogTemplate = path.resolve(`./src/templates/blog-template.jsx`)
 
 exports.createPages = async ({graphql, actions, reporter}) => {
     const {createPage} = actions 
@@ -29,7 +29,7 @@ exports.createPages = async ({graphql, actions, reporter}) => {
     posts.forEach(node => {
         createPage({
             path: node.frontmatter.slug, 
-            component: `${postTemplate}?__contentFilePath=${node.internal.contentFilePath}`, 
+            component: `${blogTemplate}?__contentFilePath=${node.internal.contentFilePath}`, 
             context: {id: node.id},
         })
     })

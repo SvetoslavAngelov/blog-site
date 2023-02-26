@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import { themes } from "../styles/ColorStyles"
-import { BodyMain } from "../styles/TextStyles"
 
 const socials = [
     {title: "", icon: "/images/logos/Twitter - Negative.svg", link: "404"},
@@ -13,9 +12,6 @@ const socials = [
 export default function Footer() {
     return (
         <Wrapper>
-            <FooterText>
-                {"Connect"}
-            </ FooterText>
             <MenuWrapper>
                 {socials.map((item, index) => (
                     <a href={item.link} key={index}>
@@ -30,8 +26,7 @@ export default function Footer() {
 
 const Wrapper = styled.div`
     display: flex; 
-    justify-content: space-between;
-    align-items: center; 
+    justify-content: center;
     width: 100%;
     padding: 40px; 
 
@@ -47,12 +42,8 @@ const MenuWrapper = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    align-self: flex-end; 
+    align-self: center; 
 
     padding: 40px;
     gap: 40px; 
-`
-
-const FooterText = styled(BodyMain)`
-    color: ${themes.lightMode.textPrimary};
 `

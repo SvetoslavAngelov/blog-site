@@ -42,7 +42,7 @@ const Image = styled.img`
 `
 const Title = styled(BodyIntro)`
     max-width: 460px; 
-    color: ${themes.lightMode.textSecondary};
+    color: ${themes.lightMode.textPrimary};
 
     @media (max-width: 1024) {
         max-width: 380px;
@@ -56,7 +56,7 @@ const Title = styled(BodyIntro)`
 `
 const Text = styled(MediumText)`
     max-width: 460px; 
-    color: ${themes.lightMode.textSecondary};
+    color: ${themes.lightMode.textPrimary};
 
     @media (max-width: 1024) {
         max-width: 380px;

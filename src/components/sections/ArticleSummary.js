@@ -6,10 +6,12 @@ import { BodyIntro, Caption, MediumText } from "../styles/TextStyles"
 export default function ArticleSummary(
     {date = "26/01/2023", 
         title = "Title", 
-        text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rhoncus felis non felis fringilla, a imperdiet velit dapibus. Suspendisse vel aliquet ex, eu sodales lectus."}) {
+        text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        img = "/images/assets/Profile.png"
+    }) {
     return (
         <Wrapper>
-            <Image src="/images/assets/PlaceHolder.png" className = "placeholder"/>
+            <Image src={img} className = "headline"/>
             <Title>
                 {title}
             </ Title>
