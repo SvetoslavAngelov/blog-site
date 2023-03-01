@@ -6,7 +6,7 @@ import { BodyMain, H3 } from "../styles/TextStyles"
 
 const menuData = [
     {title: "Blog", link: "/blog"}, 
-    {title: "Projects", link: "/404"}, 
+    {title: "Projects", link: "/projects"}, 
     {title: "About", link: "/about"}
 ]
 
