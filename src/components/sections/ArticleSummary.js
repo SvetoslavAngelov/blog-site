@@ -11,7 +11,7 @@ export default function ArticleSummary(
     }) {
     return (
         <Wrapper>
-            <Image src={img} className = "headline"/>
+            <Image src={img}/>
             <Title>
                 {title}
             </ Title>

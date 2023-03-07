@@ -9,7 +9,7 @@ module.exports = {
     author: `Svetlo`
   },
   plugins: [
-  "gatsby-plugin-mdx", 
+  "gatsby-plugin-mdx", "gatsby-plugin-styled-components",
   {
     resolve: "gatsby-source-filesystem",
     options: {
