@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
 import styled from "styled-components"
 import Layout from "../components/layout/layout"
 import Seo from "../components/layout/seo"
@@ -8,13 +8,25 @@ import { BodyIntro, MediumText } from "../components/styles/TextStyles"
 
 export default function About() {
 
+    const data = useStaticQuery(graphql`
+        query {
+            allMdx (filter: {frontmatter: {slug: {eq: "/about"}}}) {
+                nodes {
+                    body
+                }
+            }
+        }
+    `);
+
+    const body = data.allMdx.nodes.body;
+
     return (
         <Layout>
-        <Seo title="Blog" />
+        <Seo title="About Me" />
         <Wrapper>
             <Title>About me</ Title>
             <Image src="/images/assets/PlaceHolder.png" className = "placeholder"/>
-            <Text src="/text/aboutMe.md" className="aboutMe"/>
+            {body}
         </ Wrapper>
         <Link to="/">Back to Home</Link>
       </Layout>
