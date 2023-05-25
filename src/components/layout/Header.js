@@ -7,7 +7,7 @@ import { BodyMain, H3 } from "../styles/TextStyles"
 const menuData = [
     {title: "Blog", link: "/blog"}, 
     {title: "Projects", link: "/projects"}, 
-    {title: "About", link: "/about"}
+    {title: "About", link: "/aboutme"}
 ]
 
 export default function Header() {
