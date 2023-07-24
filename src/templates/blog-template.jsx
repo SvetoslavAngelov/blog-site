@@ -9,8 +9,10 @@ import Title from "../components/layout/Title"
 import SubTitle from "../components/layout/SubTitle"
 import Body from "../components/layout/Body"
 import Date from "../components/layout/Date"
+import Image from "../components/layout/Image"
+import Group from "../components/layout/Group"
 
-const shortcodes = { Link, Title, Body, SubTitle, Date }
+const shortcodes = { Link, Title, Body, SubTitle, Date, Image, Group }
 
 export default function PageTemplate({data, children}) {
 
