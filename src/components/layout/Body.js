@@ -13,7 +13,6 @@ export default function Body(props) {
 }
 
 const Style = styled(BodyMain)`
-    text-indent: 25px;
     max-width: 1024px; 
     color: ${themes.lightMode.textPrimary};
 

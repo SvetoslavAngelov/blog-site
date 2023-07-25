@@ -10,6 +10,7 @@ function ProjectSection() {
         query {
             allMdx (filter: {internal: {contentFilePath: {regex: "/content/projects/"}}}) {
                 nodes {
+                    id,
                     frontmatter {
                         date,
                         title, 
@@ -23,7 +24,7 @@ function ProjectSection() {
     `);
 
     const nodes = data.allMdx.nodes.map((node) => 
-        <Link to={node.frontmatter.slug}>
+        <Link key={node.id} to={node.frontmatter.slug}>
             <ArticleSummary 
                 date = {node.frontmatter.date}
                 title = {node.frontmatter.title}
