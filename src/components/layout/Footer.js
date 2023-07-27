@@ -3,10 +3,9 @@ import styled from "styled-components"
 import { themes } from "../styles/ColorStyles"
 
 const socials = [
-    {title: "", icon: "/images/logos/Twitter - Negative.svg", link: "404"},
+    {title: "", icon: "/images/logos/GitHub - Negative.svg", link: "https://github.com/SvetoslavAngelov"},
     {title: "", icon: "/images/logos/LinkedIn - Negative.svg", link: "https://www.linkedin.com/in/svetoslavangelov86/"},
-    {title: "", icon: "/images/logos/YouTube - Negative.svg", link: "404"},
-    {title: "", icon: "/images/logos/Instagram - Negative.svg", link: "404"},
+    {title: "", icon: "/images/logos/Instagram - Negative.svg", link: "https://www.instagram.com/svetloang/"},
 ]
 
 export default function Footer() {
