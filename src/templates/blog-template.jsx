@@ -11,8 +11,9 @@ import Body from "../components/layout/Body"
 import Date from "../components/layout/Date"
 import Image from "../components/layout/Image"
 import Group from "../components/layout/Group"
+import CodeBlock from "../components/layout/CodeBlock"
 
-const shortcodes = { Link, Title, Body, SubTitle, Date, Image, Group }
+const shortcodes = { Link, Title, Body, SubTitle, Date, Image, Group, CodeBlock }
 
 export default function PageTemplate({data, children}) {
 

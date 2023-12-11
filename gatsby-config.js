@@ -15,6 +15,11 @@ module.exports = {
     options: {
       name: "content",
       path: `${__dirname}/static/content`,
+      gatsbyRemarkPlugins: [
+        {
+          resolve: `gatsby-remark-highlight-code`,
+        },
+      ],
     },
   },
   {

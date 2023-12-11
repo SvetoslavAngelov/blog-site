@@ -4,6 +4,8 @@ import { GlobalStyle } from "../styles/GlobalStyle"
 import Header from "./Header"
 import Footer from "./Footer"
 import "./layout.css"
+import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader";
+deckDeckGoHighlightElement();
 
 export default function Layout({ children }) {
   return (
