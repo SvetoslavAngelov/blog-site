@@ -8,7 +8,10 @@ function ProjectSection() {
 
     const data = useStaticQuery(graphql`
         query {
-            allMdx (filter: {internal: {contentFilePath: {regex: "/content/projects/"}}}) {
+            allMdx (
+                filter: {
+                    internal: {contentFilePath: {regex: "/content/projects/"}}},
+                    sort: { frontmatter: {date:DESC }}) {
                 nodes {
                     id,
                     frontmatter {

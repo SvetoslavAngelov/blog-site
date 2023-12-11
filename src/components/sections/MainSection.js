@@ -8,7 +8,10 @@ function MainSection() {
 
     const data = useStaticQuery(graphql`
         query {
-            allMdx (filter: {frontmatter: {slug: {nin: "/aboutme"}}}){
+            allMdx(
+                filter: {
+                    frontmatter: {slug: {nin: "/aboutme"}}}, 
+                    sort: { frontmatter: {date:DESC }}) {
                 nodes {
                     id,
                     frontmatter {

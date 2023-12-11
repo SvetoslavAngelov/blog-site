@@ -8,7 +8,10 @@ function BlogSection() {
 
     const data = useStaticQuery(graphql`
         query {
-            allMdx (filter: {internal: {contentFilePath: {regex: "/content/blog/"}}}) {
+            allMdx (
+                filter: {
+                    internal: {contentFilePath: {regex: "/content/blog/"}}},
+                    sort: { frontmatter: {date:DESC }}) {
                 nodes {
                     id,
                     frontmatter {
