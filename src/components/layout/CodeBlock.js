@@ -15,4 +15,8 @@ export default function CodeBlock({ code }) {
 const Wrapper = styled.div` 
     width: 100%;
     gap: 20px 100px;
+
+    @media (max-width: 420px) {
+        max-width: 390px; 
+    }
 `
